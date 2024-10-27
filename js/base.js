@@ -87,7 +87,7 @@ samples.forEach((sample) => {
         event.dataTransfer.setData("sampleId", newButton.dataset.id)
     })
 
-    // Event listener for mobile devices including styling of the button when the button is pressed
+    // Event listener for mobile devices when the button is pressed
     newButton.addEventListener("touchstart", (event) => {
         const touch = event.touches[0]
         event.target.dataset.touchStartId = newButton.dataset.id
@@ -97,7 +97,7 @@ samples.forEach((sample) => {
         newButton.style.top = touch.pageY + "px"
     })
 
-    // Event listener for mobile devices including styling of the button when the button is moved/dragged
+    // Event listener for mobile devices when dragging the button
     newButton.addEventListener("touchmove", (event) => {
         const touch = event.touches[0]
         newButton.style.left = touch.pageX + "px"
@@ -105,7 +105,7 @@ samples.forEach((sample) => {
 
     })
 
-    // Event listener for mobile devices including styling of the button when the dragging ends
+    // Event listener for mobile devices when you release dragging the button
     newButton.addEventListener("touchend", (event) => {
         let targetElement = document.elementFromPoint(
             event.changedTouches[0].clientX,
@@ -146,7 +146,6 @@ function addSampleMobile(event, trackNumber) {
 
 
 // This function handles the samples dropped on track
-// There are also added some attributes for
 function addSample(event, trackNumber) {
     event.preventDefault()
     const sampleId = event.dataTransfer.getData("sampleId")
