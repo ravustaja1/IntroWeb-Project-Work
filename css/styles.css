@@ -1,0 +1,59 @@
+:root {
+    --main-color: #000000;
+}
+
+body {
+    background-color: #eceff1;
+    /*margin: 5px;*/
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+}
+
+#tracks {
+    margin: 0;
+}
+
+#tracks > div {
+    display: flex;
+    background-color: #cccccc;
+    border: 2px solid var(--main-color);
+    height: 40px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+#tracks > div > .track-item {
+    background-color: #007acc;
+    color: #ffffff;
+    margin: 5px 0 5px 5px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    display: inline-block;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#tracks > div h2 {
+    margin: 0 10px 0 0;
+}
+
+.volume-slider {
+    width: 10%;
+}
+
+button {
+    padding: 5px;
+    background-color: #00a2ff;
+}
+
+#addButtons button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    background-color: #00a2ff;
+}
